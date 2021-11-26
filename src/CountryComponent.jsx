@@ -55,8 +55,20 @@ export default class ContryComponent extends Component {
             <div>
                 <h4>Country Details</h4>
                 <div>
-                    <TextField id="countryCode" placeholder="Enter country" onChange={this.saveCountryCode}></TextField>
-                    <Button variant="contained" color="primary" disabled={countryCode == '' ? true : false} onClick={this.getCountryDetails}>Get Country Details</Button>
+                    <TextField
+                        id="countryCode"
+                        placeholder="Enter country"
+                        onChange={this.saveCountryCode}
+                        inputProps={{ "data-testid": "country-text-box" }}>
+                    </TextField>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        disabled={countryCode == '' ? true : false}
+                        onClick={this.getCountryDetails}
+                        data-testid="get-country-details-button">
+                        Get Country Details
+                    </Button>
                 </div>
                 <TableContainer component={Paper}>
                     <Table className={classes.table} aria-label="simple table">

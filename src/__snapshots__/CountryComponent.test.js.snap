@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContryComponent should render the ContryComponent Component correctly 1`] = `
+exports[`ContryComponent should render the Contry Component correctly 1`] = `
 <div>
   <h4>
     Country Details
@@ -8,11 +8,17 @@ exports[`ContryComponent should render the ContryComponent Component correctly 1
   <div>
     <WithStyles(ForwardRef(TextField))
       id="countryCode"
+      inputProps={
+        Object {
+          "data-testid": "country-text-box",
+        }
+      }
       onChange={[Function]}
       placeholder="Enter country"
     />
     <WithStyles(ForwardRef(Button))
       color="primary"
+      data-testid="get-country-details-button"
       disabled={true}
       onClick={[Function]}
       variant="contained"
